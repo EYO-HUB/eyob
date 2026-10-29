@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Sparkles, Menu, X, FolderGit2, Cpu, Mail, Palette } from 'lucide-react'
 import { THEME_PRESETS } from '../theme'
+import profileImage from '../assets/profile.jpg'
 
 export default function Navbar({
   onToggleWireframe,
@@ -57,7 +58,7 @@ export default function Navbar({
               <div className="w-full h-full bg-black/80 rounded-[10px] flex items-center justify-center font-bold text-white text-sm font-mono shadow-inner overflow-hidden">
                 {!profilePhotoFailed ? (
                   <img
-                    src="/profile.jpg"
+                    src={profileImage}
                     alt="Eyob Tesfaye"
                     className="w-full h-full object-cover"
                     onError={() => setProfilePhotoFailed(true)}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowRight, Mail, Github, MapPin, Sparkles, Terminal, User, Download, Code2 } from 'lucide-react'
+import profileImage from '../assets/profile.jpg'
 
 export default function Hero({ currentTheme = {} }) {
   const accent = currentTheme.accentColor || '#ff4500'
@@ -8,8 +9,6 @@ export default function Hero({ currentTheme = {} }) {
   const textBody = currentTheme.textBody || '#cbd5e1'
   const textMuted = currentTheme.textMuted || '#94a3b8'
 
-  // Static Profile photo path
-  const profileImage = '/profile.jpg'
   const [imgError, setImgError] = useState(false)
 
   return (
